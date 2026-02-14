@@ -1,0 +1,69 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { ArrowRight, Sparkles } from "lucide-react";
+
+export function Hero() {
+    return (
+        <section className="relative overflow-hidden bg-slate-50 py-12 md:py-24 lg:py-32">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+                    <div className="flex flex-col justify-center space-y-8">
+                        <div className="space-y-4">
+                            <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800">
+                                <Sparkles className="mr-2 h-3.5 w-3.5 text-primary" />
+                                Ranní rituál krásy
+                            </div>
+                            <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
+                                Ráno bez otoků a <span className="text-primary italic">tvář, která září...</span>
+                            </h1>
+                            <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Autorský kurz samomasáže od expertky Jevgenije Pavlovové. Získejte pevné kontury a svěží vzhled za <span className="font-bold">15 minut denně</span> bez injekci, bolesti a rizika.
+                            </p>
+                            <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-medium">
+                                Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-3 min-[400px]:flex-row">
+                            <Link href="#cenik">
+                                <Button size="lg" className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                    Chci začít svou proměnu
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Button>
+                            </Link>
+                            <Button size="lg" variant="outline" className="rounded-full px-8">
+                                Více o kurzu
+                            </Button>
+                        </div>
+                        <p className="text-xs text-slate-500">
+                            * Přidejte se k více než 500+ spokojeným ženám
+                        </p>
+                    </div>
+
+                    {/* Image Placeholder */}
+                    <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
+                        <div className="aspect-[4/5] relative overflow-hidden rounded-2xl bg-slate-200 shadow-xl ring-1 ring-slate-900/10">
+                            {/* Replace with actual image later */}
+                            <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
+                                <Image
+                                    src="/foto_1_1.jpeg"
+                                    alt="Relaxační masáž obličeje"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            </div>
+
+                            {/* Decorative frame */}
+                            <div className="absolute inset-0 border-[12px] border-white/50" />
+
+                            {/* Decorative elements */}
+                            <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
+                            <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
