@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export function Footer() {
     return (
@@ -35,17 +35,9 @@ export function Footer() {
                             <li>Sledujte nás na sociálních sítích:</li>
                         </ul>
                         <div className="flex gap-4">
-                            <Link href="#" className="text-slate-400 hover:text-primary">
+                            <Link href="https://www.instagram.com/pavlova.facemassage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary">
                                 <Instagram className="h-5 w-5" />
                                 <span className="sr-only">Instagram</span>
-                            </Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary">
-                                <Facebook className="h-5 w-5" />
-                                <span className="sr-only">Facebook</span>
-                            </Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary">
-                                <Youtube className="h-5 w-5" />
-                                <span className="sr-only">Youtube</span>
                             </Link>
                         </div>
                     </div>

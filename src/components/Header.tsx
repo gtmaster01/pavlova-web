@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Instagram } from "lucide-react";
 
 export function Header() {
     const navLinks = [
@@ -89,9 +89,10 @@ export function Header() {
                                 <div className="mt-6 pt-6 border-t border-slate-100 text-center">
                                     <p className="text-sm text-slate-400 mb-2">Sledujte nás</p>
                                     <div className="flex justify-center gap-4">
-                                        {/* Social placeholders - functionality to be added/linked if needed */}
-                                        <div className="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">Ins</div>
-                                        <div className="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">Fb</div>
+                                        <Link href="https://www.instagram.com/pavlova.facemassage" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-primary hover:bg-slate-200 transition-colors">
+                                            <Instagram className="h-5 w-5" />
+                                            <span className="sr-only">Instagram</span>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
