@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { CourseDetailModal } from "./CourseDetailModal";
 
 export function Hero() {
     return (
@@ -10,10 +11,7 @@ export function Hero() {
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
                     <div className="flex flex-col justify-center space-y-8">
                         <div className="space-y-4">
-                            <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800">
-                                <Sparkles className="mr-2 h-3.5 w-3.5 text-primary" />
-                                Ranní rituál krásy
-                            </div>
+
                             <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
                                 Ráno bez otoků a <span className="text-primary italic">tvář, která září...</span>
                             </h1>
@@ -31,9 +29,14 @@ export function Hero() {
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </Link>
-                            <Button size="lg" variant="outline" className="rounded-full px-8">
-                                Více o kurzu
-                            </Button>
+                            <CourseDetailModal
+                                trigger={
+                                    <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Více o kurzu
+                                    </Button>
+                                }
+                            />
+
                         </div>
                         <p className="text-xs text-slate-500">
                             * Přidejte se k více než 500+ spokojeným ženám

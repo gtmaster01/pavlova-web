@@ -1,4 +1,5 @@
 import { Check, X } from "lucide-react";
+import { CourseDetailModal } from "./CourseDetailModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -98,11 +99,17 @@ export function Pricing() {
                             </ul>
                         </CardContent>
                         <CardFooter>
-                            <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md">
+                            <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
                                 Koupit VIP Balíček
                             </Button>
                         </CardFooter>
                     </Card>
+                </div>
+            </div>
+            <div className="mt-12 text-center">
+                <p className="text-slate-600 mb-4">Chcete vědět více o tom, jak kurz probíhá?</p>
+                <div className="max-w-xs mx-auto">
+                    <CourseDetailModal />
                 </div>
             </div>
         </section>

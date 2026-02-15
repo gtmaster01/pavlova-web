@@ -7,7 +7,7 @@ export function AboutMe() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     {/* Text Content */}
-                    <div className="order-2 lg:order-1 space-y-6">
+                    <div className="space-y-6">
                         <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                             Vaše průvodkyně k přirozené kráse a zdraví
                         </h2>
@@ -52,7 +52,7 @@ export function AboutMe() {
                     </div>
 
                     {/* Image */}
-                    <div className="order-1 lg:order-2 flex justify-center">
+                    <div className="flex justify-center">
                         <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 shadow-lg rotate-2 hover:rotate-0 transition-transform duration-500">
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400">
                                 <Image

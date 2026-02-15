@@ -8,24 +8,32 @@ import {
 export function FAQ() {
     const faqs = [
         {
-            question: "Jak dlouho mám přístup ke kurzu?",
-            answer: "Přístup ke kurzu vám zůstává napořád. Můžete se k lekcím kdykoli vrátit.",
+            question: "Nevytahám si samomasáží kůži ještě více?",
+            answer: "To je nejčastější obava, ale opak je pravdou. Moje techniky jsou zaměřeny na svaly a fascie (vnitřní konstrukci obličeje), nikoliv na vytahování povrchové kůže. Jako certifikovaná kosmetička vás naučím, jak fixovat tkáně a pracovat v hloubce. Tím pokožce vrátíme její přirozenou oporu, takže se naopak vypne a zpevní.",
         },
         {
-            question: "Potřebuji nějaké speciální pomůcky?",
-            answer: "Vůbec ne! Celý kurz je založen na samomasáži rukama. Pokud máte gua sha nebo roller, můžete je využít, ale nejsou nutné.",
+            question: "Opravdu mi stačí jen vlastní ruce? Nepotřebuji žádné pomůcky?",
+            answer: "Přesně tak. Vaše ruce jsou tím nejdokonalejším a nejcitlivějším nástrojem. V kurzu vás naučím, jak správně používat dlaně, klouby a prsty k dosažení skulpturálního a liftingového efektu. Nepotřebujete žádné drahé přístroje ani gua-sha kameny – své „studio krásy“ tak máte kdykoliv a kdekoli u sebe.",
         },
         {
-            question: "Je masáž vhodná pro citlivou pleť?",
-            answer: "Ano, techniky jsou velmi jemné a šetrné. Pokud máte specifické kožní problémy (akné, ekzém), doporučuji konzultaci s lékařem, ale lymfatická masáž je obecně velmi prospěšná.",
+            question: "Za jak dlouho uvidím první výsledky?",
+            answer: "Ústup ranních otoků a zdravější barvu pleti uvidíte hned po prvním cvičení. Pokud budete masáž provádět pravidelně (stačí 15 minut denně), po 7 dnech pocítíte uvolnění svalového napětí a po 21 dnech si všimnete pevnějšího oválu a vyhlazení jemných vrásek. Výsledky jsou kumulativní – čím déle techniky ovládáte, tím lépe vaše tvář vypadá.",
         },
         {
-            question: "Kolik času mi to zabere?",
-            answer: "Celá ranní rutina je navržena tak, aby nezabrala více než 5-10 minut. Ideální pro uspěchaná rána.",
+            question: "Je kurz vhodný i pro citlivou pleť nebo po zákrocích?",
+            answer: "Ano. Díky mé osobní zkušenosti s onkologickou léčbou kladu na bezpečnost a šetrnost absolutní důraz. Metoda Well-age je navržena tak, aby respektovala zdraví pleti. Pokud jste po aplikaci botoxu nebo výplní, doporučuji s masáží začít až po vstřebání (obvykle po 2–4 týdnech), aby se prodloužil jejich efekt a podpořila regenerace tkání.",
         },
         {
-            question: "Jak technicky kurz probíhá?",
-            answer: "Po zaplacení vám přijde e-mail s přihlašovacími údaji do členské sekce, kde najdete všechna videa přehledně seřazená.",
+            question: "Je kurz vhodný i pro úplné začátečnice?",
+            answer: "Ano, kurz je postaven „od nuly“. Vše vysvětluji krok za krokem – od toho, jak si správně umýt ruce, až po hloubkové masážní hmaty. Nepotřebujete žádné předchozí zkušenosti ani znalosti z kosmetologie. Jsem vaše průvodkyně a povedu vaše ruce celou dobu.",
+        },
+        {
+            question: "Jak kurz obdržím a jak dlouho k němu budu mít přístup?",
+            answer: "Ihned po potvrzení platby obdržíte na svůj e-mail přístupové údaje do členské sekce. Kurz máte k dispozici doživotně. Můžete se k němu vracet za rok, za dva nebo kdykoliv budete mít pocit, že vaše pleť potřebuje extra péči. Videa můžete sledovat online na počítači, tabletu i mobilu.",
+        },
+        {
+            question: "Potřebujete pomoc?",
+            answer: "Pokud narazíte na technické potíže se vstupem do kurzu nebo vám po zaplacení nedorazily přístupové údaje, neváhejte mě kontaktovat. Jsem tu pro vás. Napište mi na WhatsApp: 👉 +420 608 236 696",
         },
     ];
 
