@@ -1,26 +1,26 @@
-import { CheckCircle2, CloudLightning, Clock, PlayCircle } from "lucide-react";
+import { CloudLightning, Sparkles, Hand, GraduationCap } from "lucide-react";
 
 export function CourseInfo() {
     const features = [
         {
             icon: <CloudLightning className="h-6 w-6 text-primary" />,
-            title: "Konec ranním otokům",
-            desc: "Efektivní lymfatická masáž odstraní přebytečnou tekutinu z obličeje."
+            title: "Stop „unavené tváři“ a ranním otokům",
+            desc: "Už nemusíte čekat hodiny, než vaše tvář po probuzení „splaskne“. Naučím vás, jak za pár minut rozproudit lymfu, otevřít pohled a zbavit se váčků pod očima. Vraťte své pleti svěžest hned na začátku dne."
         },
         {
-            icon: <Clock className="h-6 w-6 text-primary" />,
-            title: "Jen 5-10 minut denně",
-            desc: "Rychlá a účinná rutina, kterou snadno zařadíte do svého rána."
+            icon: <Sparkles className="h-6 w-6 text-primary" />,
+            title: "Efekt jako po návštěvě kosmetologa za 30 minut",
+            desc: "Získejte profesionální výsledek v pohodlí domova. Moje techniky skulpturální a myofasciální masáže zpevňují hluboké svaly, které drží ovál obličeje. Je to přirozená cesta k ostrým konturám a vyhlazení vrásek bez jehel a výplní."
         },
         {
-            icon: <PlayCircle className="h-6 w-6 text-primary" />,
-            title: "Video lekce krok za krokem",
-            desc: "Detailní návody, podle kterých se snadno naučíte správnou techniku."
+            icon: <Hand className="h-6 w-6 text-primary" />,
+            title: "Vaše ruce jsou váš jediný nástroj",
+            desc: "Nepotřebujete žádné drahé přístroje, gua-sha kameny ani speciální pomůcky. Své „studio krásy“ máte neustále u sebe. Kurz vás naučí, jak pomocí vlastních rukou dosáhnout hloubkového liftingu kdykoli a kdekoli."
         },
         {
-            icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
-            title: "Okamžitý efekt",
-            desc: "Viditelné výsledky v podobě rozjasněné a vypnuté pleti ihned po masáži."
+            icon: <GraduationCap className="h-6 w-6 text-primary" />,
+            title: "Profesionální systém, nikoliv jen náhodná cvičení",
+            desc: "Internet je plný bezplatných videí, která však postrádají systém a při nesprávném provedení mohou pleti spíše uškodit. Můj kurz je postaven na hluboké znalosti anatomie a myofasciálních řetězců. Získáte jistotu, že každý váš pohyb směřuje k omlazení, nikoliv k vytahování kůže."
         }
     ];
 
@@ -29,7 +29,7 @@ export function CourseInfo() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                        Proč je tento kurz pro vás?
+                        Proč je tento kurz právě pro vás?
                     </h2>
                     <p className="text-slate-600 text-lg">
                         Zapomeňte na drahé přístroje. Vše, co potřebujete, jsou vaše ruce a správná technika.

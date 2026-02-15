@@ -23,7 +23,6 @@ export function Footer() {
                             <li><Link href="#o-kurzu" className="hover:text-primary">O kurzu</Link></li>
                             <li><Link href="#cenik" className="hover:text-primary">Ceník</Link></li>
                             <li><Link href="#faq" className="hover:text-primary">FAQ</Link></li>
-                            <li><Link href="#" className="hover:text-primary">Přihlášení pro členy</Link></li>
                         </ul>
                     </div>
 

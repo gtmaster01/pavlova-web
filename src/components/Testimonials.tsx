@@ -6,19 +6,19 @@ export function Testimonials() {
     // Placeholder images for now, user will upload real ones later
     const testimonials = [
         {
-            name: "Jana Nováková",
+            name: "Jana",
             rating: 5,
-            image: "https://placehold.co/400x500/e2e8f0/1e293b?text=Jana",
+            image: "/recenze_1.jpeg",
         },
         {
-            name: "Petra Svobodová",
+            name: "Petra",
             rating: 5,
-            image: "https://placehold.co/400x500/e2e8f0/1e293b?text=Petra",
+            image: "/recenze_2.jpeg",
         },
         {
-            name: "Eva Králová",
+            name: "Andrea",
             rating: 5,
-            image: "https://placehold.co/400x500/e2e8f0/1e293b?text=Eva",
+            image: "/recenze_3.jpeg",
         },
     ];
 
@@ -33,25 +33,25 @@ export function Testimonials() {
                     {testimonials.map((t, i) => (
                         <Card key={i} className="group border-none shadow-none bg-transparent">
                             <CardContent className="p-0 flex flex-col items-center">
-                                <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                                <div className="relative w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition-shadow duration-300 bg-slate-50">
                                     <Image
                                         src={t.image}
                                         alt={`Proměna - ${t.name}`}
                                         fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="object-contain transition-transform duration-500 group-hover:scale-105 pb-16"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                                     />
-                                </div>
 
-                                <div className="flex flex-col items-center gap-2">
-                                    <div className="flex gap-1 text-yellow-400">
-                                        {[...Array(t.rating)].map((_, i) => (
-                                            <Star key={i} className="h-4 w-4 fill-current" />
-                                        ))}
+                                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/30 backdrop-blur-md border-t border-white/20 flex flex-col items-center justify-center gap-1">
+                                        <div className="flex gap-1 text-yellow-400 drop-shadow-sm">
+                                            {[...Array(t.rating)].map((_, i) => (
+                                                <Star key={i} className="h-4 w-4 fill-current" />
+                                            ))}
+                                        </div>
+                                        <p className="font-handwriting text-xl text-slate-700 font-medium rotate-[-2deg]">
+                                            {t.name}
+                                        </p>
                                     </div>
-                                    <p className="font-handwriting text-xl text-slate-600 font-medium rotate-[-2deg]">
-                                        {t.name}
-                                    </p>
                                 </div>
                             </CardContent>
                         </Card>
