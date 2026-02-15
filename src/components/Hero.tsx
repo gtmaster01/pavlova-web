@@ -22,7 +22,7 @@ export function Hero() {
                                 Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.
                             </p>
                         </div>
-                        <div className="flex flex-col gap-3 min-[400px]:flex-row">
+                        <div className="flex flex-col gap-3 sm:flex-row">
                             <Link href="#cenik">
                                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                                     Chci začít svou proměnu
