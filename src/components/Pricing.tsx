@@ -18,89 +18,77 @@ export function Pricing() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {/* Basic Tier */}
+                    {/* Basic Tier - SAMOSTUDIUM */}
                     <Card className="flex flex-col border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                         <CardHeader>
-                            <CardTitle className="font-serif text-2xl text-slate-900">Základní</CardTitle>
-                            <CardDescription>Pro začátečnice, které chtějí základní rutinu.</CardDescription>
+                            <CardTitle className="font-serif text-2xl text-slate-900">SAMOSTUDIUM</CardTitle>
+                            <CardDescription>Vše, co potřebujete pro vlastní ranní rituál.</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-1">
-                            <div className="text-4xl font-bold text-slate-900 mb-6">990 Kč</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-6">2 399 Kč</div>
                             <ul className="space-y-3">
                                 <li className="flex items-center text-slate-600">
-                                    <Check className="h-5 w-5 text-green-500 mr-2" />
-                                    Přístup ke kurzu navždy
+                                    <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                                    7 video lekcí (kompletní systém)
                                 </li>
                                 <li className="flex items-center text-slate-600">
-                                    <Check className="h-5 w-5 text-green-500 mr-2" />
-                                    5 video lekcí
+                                    <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                                    Doživotní přístup k materiálům
                                 </li>
                                 <li className="flex items-center text-slate-600">
-                                    <Check className="h-5 w-5 text-green-500 mr-2" />
-                                    Délka rutiny 5-7 minut
+                                    <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                                    Metoda Well-age bez pomůcek
                                 </li>
                                 <li className="flex items-center text-slate-400 decoration-slate-300">
-                                    <X className="h-5 w-5 mr-2" />
-                                    <span className="line-through">Bonus: PDF Manuál</span>
+                                    <X className="h-5 w-5 mr-2 flex-shrink-0" />
+                                    <span className="line-through">Osobní konzultace s Evgeniyou</span>
                                 </li>
                                 <li className="flex items-center text-slate-400 decoration-slate-300">
-                                    <X className="h-5 w-5 mr-2" />
-                                    <span className="line-through">Bonus: Večerní rituál</span>
-                                </li>
-                                <li className="flex items-center text-slate-600">
-                                    <Check className="h-5 w-5 text-green-500 mr-2" />
-                                    E-mailová podpora
+                                    <X className="h-5 w-5 mr-2 flex-shrink-0" />
+                                    <span className="line-through">Individuální kontrola techniky</span>
                                 </li>
                             </ul>
                         </CardContent>
                         <CardFooter>
-                            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">
-                                Koupit Základní
+                            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold">
+                                KOUPIT ZÁKLADNÍ
                             </Button>
                         </CardFooter>
                     </Card>
 
-                    {/* VIP Tier */}
+                    {/* VIP Tier - OSOBNÍ MENTORING */}
                     <Card className="flex flex-col border-primary/50 shadow-lg relative overflow-hidden bg-slate-50/50">
                         <div className="absolute top-0 right-0 bg-primary text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-lg">
                             DOPORUČENO
                         </div>
                         <CardHeader>
-                            <CardTitle className="font-serif text-2xl text-slate-900">VIP Balíček</CardTitle>
-                            <CardDescription>Kompletní péče pro maximální výsledky.</CardDescription>
+                            <CardTitle className="font-serif text-2xl text-slate-900">OSOBNÍ MENTORING</CardTitle>
+                            <CardDescription>Maximální výsledky pod mým odborným dohledem.</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-1">
-                            <div className="text-4xl font-bold text-slate-900 mb-6">1 490 Kč</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-6">14 999 Kč</div>
                             <ul className="space-y-3">
                                 <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    Přístup ke kurzu navždy
+                                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                                    <strong>Vše z tarifu SAMOSTUDIUM</strong>
                                 </li>
                                 <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    5 video lekcí + 2 Bonusové
+                                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                                    Osobní online konzultace (30 min): Diagnostika asymetrií tváře
                                 </li>
                                 <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    Délka rutiny 5-7 minut
+                                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                                    Privátní WhatsApp chat (1 měsíc): Odpovědi na vaše otázky
                                 </li>
                                 <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    <strong>Bonus:</strong> Tiskový PDF manuál
-                                </li>
-                                <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    <strong>Bonus:</strong> Večerní rituál (Video)
-                                </li>
-                                <li className="flex items-center text-slate-700 font-medium">
-                                    <Check className="h-5 w-5 text-primary mr-2" />
-                                    Prioritní podpora + Q&A
+                                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                                    Kontrola vaší techniky: Oprava pohybů přes video
                                 </li>
                             </ul>
                         </CardContent>
                         <CardFooter>
                             <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
-                                Koupit VIP Balíček
+                                CHCI VIP PÉČI
                             </Button>
                         </CardFooter>
                     </Card>

@@ -56,7 +56,7 @@ export function AboutMe() {
                         <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 shadow-lg rotate-2 hover:rotate-0 transition-transform duration-500">
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400">
                                 <Image
-                                    src="/foto_2.jpeg"
+                                    src="/foto_1_n.JPEG"
                                     alt="Portrét expertky"
                                     fill
                                     className="object-cover"

@@ -16,22 +16,22 @@ export function Hero() {
                                 Ráno bez otoků a <span className="text-primary italic">tvář, která září...</span>
                             </h1>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                Autorský kurz samomasáže od expertky Jevgenije Pavlovové. Získejte pevné kontury a svěží vzhled za <span className="font-bold">15 minut denně</span> bez injekci, bolesti a rizika.
+                                Autorský kurz samomasáže od expertky Jevgenije Pavlovové. Získejte pevné kontury a svěží vzhled za <span className="font-bold">30 minut</span> bez injekci, bolesti a rizika.
                             </p>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-medium">
                                 Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.
                             </p>
                         </div>
-                        <div className="flex flex-col gap-3 sm:flex-row">
-                            <Link href="#cenik">
-                                <Button size="lg" className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        <div className="flex flex-row flex-wrap gap-3">
+                            <Link href="#cenik" className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none">
+                                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
                                     Chci začít svou proměnu
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </Link>
                             <CourseDetailModal
                                 trigger={
-                                    <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                    <Button size="lg" variant="outline" className="flex-1 min-w-[120px] sm:min-w-0 sm:flex-none w-full sm:w-auto border-primary text-primary hover:bg-primary/10 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
                                         Více o kurzu
                                     </Button>
                                 }
@@ -49,7 +49,7 @@ export function Hero() {
                             {/* Replace with actual image later */}
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
                                 <Image
-                                    src="/foto_1_1.jpeg"
+                                    src="/foto_2_n.JPEG"
                                     alt="Relaxační masáž obličeje"
                                     fill
                                     className="object-cover"
