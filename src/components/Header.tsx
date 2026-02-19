@@ -1,17 +1,41 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Instagram } from "lucide-react";
 
 export function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
     const navLinks = [
         { name: "O mně", href: "#o-mne" },
         { name: "O kurzu", href: "#o-kurzu" },
         { name: "Ceník", href: "#cenik" },
         { name: "FAQ", href: "#faq" },
     ];
+
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const id = href.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+                const offset = 80; // height of header
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+            setIsOpen(false);
+        }
+    };
 
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md transition-all duration-300">
@@ -33,6 +57,7 @@ export function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => scrollToSection(e, link.href)}
                             className="relative text-sm font-medium text-slate-600 hover:text-primary transition-colors group py-2"
                         >
                             {link.name}
@@ -43,7 +68,7 @@ export function Header() {
 
                 {/* Desktop CTA */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Link href="#cenik">
+                    <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")}>
                         <Button className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full font-medium px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
                             Chci začít hned
                         </Button>
@@ -51,7 +76,7 @@ export function Header() {
                 </div>
 
                 {/* Mobile Menu */}
-                <Sheet>
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild className="md:hidden">
                         <Button variant="ghost" size="icon" className="text-slate-600 hover:text-slate-900 hover:bg-slate-100/50">
                             <Menu className="h-6 w-6" />
@@ -72,6 +97,7 @@ export function Header() {
                                     <Link
                                         key={link.name}
                                         href={link.href}
+                                        onClick={(e) => scrollToSection(e, link.href)}
                                         className="text-xl font-medium text-slate-600 hover:text-primary transition-colors border-b border-transparent hover:border-slate-100 pb-2"
                                     >
                                         {link.name}
@@ -80,7 +106,7 @@ export function Header() {
                             </nav>
 
                             <div className="flex flex-col gap-4 mt-auto mb-8">
-                                <Link href="#cenik" className="w-full">
+                                <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")} className="w-full">
                                     <Button className="w-full h-12 text-lg bg-primary hover:bg-primary/90 text-slate-900 font-medium transition-all duration-300 shadow-md">
                                         Chci začít hned
                                     </Button>

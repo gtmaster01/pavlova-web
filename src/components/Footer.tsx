@@ -30,7 +30,7 @@ export function Footer() {
                         <h3 className="font-serif text-lg font-semibold text-slate-900">Kontakt</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
                             <li>info@pavlova.eu</li>
-                            <li>+420 123 456 789</li>
+                            <li>+420 608 236 696</li>
                             <li>Sledujte nás na sociálních sítích:</li>
                         </ul>
                         <div className="flex gap-4">

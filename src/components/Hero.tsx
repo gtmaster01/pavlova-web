@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -5,11 +7,31 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
 
 export function Hero() {
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const id = href.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+                const offset = 80; // height of header
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
     return (
         <section className="relative overflow-hidden bg-slate-50 py-12 md:py-24 lg:py-32">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-                    <div className="flex flex-col justify-center space-y-8">
+                    <div className="flex flex-col justify-center space-y-8 lg:-translate-y-[15%] transform transition-transform duration-500">
                         <div className="space-y-4">
 
                             <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
@@ -23,7 +45,11 @@ export function Hero() {
                             </p>
                         </div>
                         <div className="flex flex-row flex-wrap gap-3">
-                            <Link href="#cenik" className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none">
+                            <Link
+                                href="#cenik"
+                                onClick={(e) => scrollToSection(e, "#cenik")}
+                                className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none"
+                            >
                                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
                                     Chci začít svou proměnu
                                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -39,7 +65,7 @@ export function Hero() {
 
                         </div>
                         <p className="text-xs text-slate-500">
-                            * Přidejte se k více než 500+ spokojeným ženám
+                            * Přidejte se k více než 100+ spokojeným ženám
                         </p>
                     </div>
 
