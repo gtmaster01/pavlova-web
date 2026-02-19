@@ -50,9 +50,16 @@ export function Pricing() {
                             </ul>
                         </CardContent>
                         <CardFooter>
-                            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold">
-                                KOUPIT ZÁKLADNÍ
-                            </Button>
+                            <a
+                                href="https://buy.stripe.com/8x29ATbEI6czbcI1i68Ra00"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full"
+                            >
+                                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold">
+                                    KOUPIT ZÁKLADNÍ
+                                </Button>
+                            </a>
                         </CardFooter>
                     </Card>
 
