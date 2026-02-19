@@ -16,7 +16,7 @@ export function Hero() {
                                 Ráno bez otoků a <span className="text-primary italic">tvář, která září...</span>
                             </h1>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                Autorský kurz samomasáže od expertky Jevgenije Pavlovové. Získejte pevné kontury a svěží vzhled za <span className="font-bold">30 minut</span> bez injekci, bolesti a rizika.
+                                Exkluzivní program přirozené modelace obličeje samomasáže od expertky Evgeniya Pavlova. Získejte pevné kontury a svěží vzhled za <span className="font-bold">15 minut</span> bez injekci, bolesti a rizika.
                             </p>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-medium">
                                 Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.
@@ -49,7 +49,7 @@ export function Hero() {
                             {/* Replace with actual image later */}
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
                                 <Image
-                                    src="/foto_2_n.JPEG"
+                                    src="/foto_2_n_.jpg"
                                     alt="Relaxační masáž obličeje"
                                     fill
                                     className="object-cover"

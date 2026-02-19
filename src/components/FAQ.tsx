@@ -9,7 +9,7 @@ export function FAQ() {
     const faqs = [
         {
             question: "Nevytahám si samomasáží kůži ještě více?",
-            answer: "To je nejčastější obava, ale opak je pravdou. Moje techniky jsou zaměřeny na svaly a fascie (vnitřní konstrukci obličeje), nikoliv na vytahování povrchové kůže. Jako certifikovaná kosmetička vás naučím, jak fixovat tkáně a pracovat v hloubce. Tím pokožce vrátíme její přirozenou oporu, takže se naopak vypne a zpevní.",
+            answer: "To je nejčastější obava, ale opak je pravdou. Moje techniky jsou zaměřeny na svaly a fascie (vnitřní konstrukci obličeje), nikoliv na vytahování povrchové kůže. Jako certifikovaná kosmetoložka vás naučím, jak fixovat tkáně a pracovat v hloubce. Tím pokožce vrátíme její přirozenou oporu, takže se naopak vypne a zpevní.",
         },
         {
             question: "Opravdu mi stačí jen vlastní ruce? Nepotřebuji žádné pomůcky?",
@@ -17,7 +17,7 @@ export function FAQ() {
         },
         {
             question: "Za jak dlouho uvidím první výsledky?",
-            answer: "Ústup ranních otoků a zdravější barvu pleti uvidíte hned po prvním cvičení. Pokud budete masáž provádět pravidelně (stačí 30 minut), po 7 dnech pocítíte uvolnění svalového napětí a po 21 dnech si všimnete pevnějšího oválu a vyhlazení jemných vrásek. Výsledky jsou kumulativní – čím déle techniky ovládáte, tím lépe vaše tvář vypadá.",
+            answer: "Ústup ranních otoků a zdravější barvu pleti uvidíte hned po prvním cvičení. Pokud budete masáž provádět pravidelně (stačí 15 minut), po 7 dnech pocítíte uvolnění svalového napětí a po 21 dnech si všimnete pevnějšího oválu a vyhlazení jemných vrásek. Výsledky jsou kumulativní – čím déle techniky ovládáte, tím lépe vaše tvář vypadá.",
         },
         {
             question: "Je kurz vhodný i pro citlivou pleť nebo po zákrocích?",

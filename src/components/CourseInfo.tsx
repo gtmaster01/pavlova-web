@@ -9,7 +9,7 @@ export function CourseInfo() {
         },
         {
             icon: <Sparkles className="h-6 w-6 text-primary" />,
-            title: "Efekt jako po návštěvě kosmetologa za 30 minut",
+            title: "Efekt jako po návštěvě kosmetologa za 15 minut",
             desc: "Získejte profesionální výsledek v pohodlí domova. Moje techniky skulpturální a myofasciální masáže zpevňují hluboké svaly, které drží ovál obličeje. Je to přirozená cesta k ostrým konturám a vyhlazení vrásek bez jehel a výplní."
         },
         {

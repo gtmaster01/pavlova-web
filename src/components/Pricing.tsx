@@ -74,7 +74,7 @@ export function Pricing() {
                                 </li>
                                 <li className="flex items-center text-slate-700 font-medium">
                                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                                    Osobní online konzultace (30 min): Diagnostika asymetrií tváře
+                                    Osobní online konzultace (30 min)
                                 </li>
                                 <li className="flex items-center text-slate-700 font-medium">
                                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0" />

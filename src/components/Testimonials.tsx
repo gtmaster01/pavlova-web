@@ -6,12 +6,12 @@ export function Testimonials() {
     // Placeholder images for now, user will upload real ones later
     const testimonials = [
         {
-            name: "Jana",
+            name: "Radka",
             rating: 5,
             image: "/recenze_1.jpeg",
         },
         {
-            name: "Petra",
+            name: "Ivona",
             rating: 5,
             image: "/recenze_2.jpeg",
         },
