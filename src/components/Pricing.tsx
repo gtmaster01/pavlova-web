@@ -51,7 +51,7 @@ export function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <a
-                                href="https://buy.stripe.com/8x29ATbEI6czbcI1i68Ra00"
+                                href="https://pavlova.kwiga.com/o/GMLw9epvreMU"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full"
@@ -94,9 +94,16 @@ export function Pricing() {
                             </ul>
                         </CardContent>
                         <CardFooter>
-                            <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
-                                CHCI VIP PÉČI
-                            </Button>
+                            <a
+                                href="https://pavlova.kwiga.com/o/LahrVqDVsJO5"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full"
+                            >
+                                <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
+                                    CHCI VIP PÉČI
+                                </Button>
+                            </a>
                         </CardFooter>
                     </Card>
                 </div>
