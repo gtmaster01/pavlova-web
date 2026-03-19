@@ -53,9 +53,9 @@ export function Hero() {
                                 onClick={(e) => scrollToSection(e, "#cenik")}
                                 className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none"
                             >
-                                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
-                                    {t("ctaPrimary")}
-                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white rounded-full px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
+                                    {t("ctaFree")}
+                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
                             </Link>
                             <CourseDetailModal
