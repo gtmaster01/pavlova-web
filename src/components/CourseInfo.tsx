@@ -1,26 +1,29 @@
 import { CloudLightning, Sparkles, Hand, GraduationCap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function CourseInfo() {
+    const t = useTranslations("CourseInfo");
+
     const features = [
         {
             icon: <CloudLightning className="h-6 w-6 text-primary" />,
-            title: "Stop „unavené tváři“ a ranním otokům",
-            desc: "Už nemusíte čekat hodiny, než vaše tvář po probuzení „splaskne“. Naučím vás, jak za pár minut rozproudit lymfu, otevřít pohled a zbavit se váčků pod očima. Vraťte své pleti svěžest hned na začátku dne."
+            title: t("feature1Title"),
+            desc: t("feature1Desc"),
         },
         {
             icon: <Sparkles className="h-6 w-6 text-primary" />,
-            title: "Efekt jako po návštěvě kosmetologa za 15 minut",
-            desc: "Získejte profesionální výsledek v pohodlí domova. Moje techniky skulpturální a myofasciální masáže zpevňují hluboké svaly, které drží ovál obličeje. Je to přirozená cesta k ostrým konturám a vyhlazení vrásek bez jehel a výplní."
+            title: t("feature2Title"),
+            desc: t("feature2Desc"),
         },
         {
             icon: <Hand className="h-6 w-6 text-primary" />,
-            title: "Vaše ruce jsou váš jediný nástroj",
-            desc: "Nepotřebujete žádné drahé přístroje, gua-sha kameny ani speciální pomůcky. Své „studio krásy“ máte neustále u sebe. Kurz vás naučí, jak pomocí vlastních rukou dosáhnout hloubkového liftingu kdykoli a kdekoli."
+            title: t("feature3Title"),
+            desc: t("feature3Desc"),
         },
         {
             icon: <GraduationCap className="h-6 w-6 text-primary" />,
-            title: "Profesionální systém, nikoliv jen náhodná cvičení",
-            desc: "Internet je plný bezplatných videí, která však postrádají systém a při nesprávném provedení mohou pleti spíše uškodit. Můj kurz je postaven na hluboké znalosti anatomie a myofasciálních řetězců. Získáte jistotu, že každý váš pohyb směřuje k omlazení, nikoliv k vytahování kůže."
+            title: t("feature4Title"),
+            desc: t("feature4Desc"),
         }
     ];
 
@@ -29,10 +32,10 @@ export function CourseInfo() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                        Proč je tento kurz právě pro vás?
+                        {t("title")}
                     </h2>
                     <p className="text-slate-600 text-lg">
-                        Zapomeňte na drahé přístroje. Vše, co potřebujete, jsou vaše ruce a správná technika.
+                        {t("subtitle")}
                     </p>
                 </div>
 

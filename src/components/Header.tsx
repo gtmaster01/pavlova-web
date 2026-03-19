@@ -2,18 +2,21 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Instagram } from "lucide-react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations("Header");
 
     const navLinks = [
-        { name: "O mně", href: "#o-mne" },
-        { name: "O kurzu", href: "#o-kurzu" },
-        { name: "Ceník", href: "#cenik" },
-        { name: "FAQ", href: "#faq" },
+        { name: t("aboutMe"), href: "#o-mne" },
+        { name: t("aboutCourse"), href: "#o-kurzu" },
+        { name: t("pricing"), href: "#cenik" },
+        { name: t("faq"), href: "#faq" },
     ];
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -66,65 +69,70 @@ export function Header() {
                     ))}
                 </nav>
 
-                {/* Desktop CTA */}
+                {/* Desktop CTA + Language Switcher */}
                 <div className="hidden md:flex items-center gap-4">
+                    <LanguageSwitcher />
                     <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")}>
                         <Button className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full font-medium px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
-                            Chci začít hned
+                            {t("cta")}
                         </Button>
                     </Link>
                 </div>
 
                 {/* Mobile Menu */}
-                <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                    <SheetTrigger asChild className="md:hidden">
-                        <Button variant="ghost" size="icon" className="text-slate-600 hover:text-slate-900 hover:bg-slate-100/50">
-                            <Menu className="h-6 w-6" />
-                            <span className="sr-only">Menu</span>
-                        </Button>
-                    </SheetTrigger>
-                    <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col pt-10 px-6">
-                        {/* Mobile Logo */}
-                        <div className="mb-8">
-                            <span className="font-serif text-2xl font-bold tracking-wide text-slate-900">
-                                Evgeniya <span className="text-primary">Pavlova</span>
-                            </span>
-                        </div>
+                <div className="flex md:hidden items-center gap-2">
+                    <LanguageSwitcher />
+                    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                        <SheetTrigger asChild>
+                            <Button variant="ghost" size="icon" className="text-slate-600 hover:text-slate-900 hover:bg-slate-100/50">
+                                <Menu className="h-6 w-6" />
+                                <span className="sr-only">Menu</span>
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col pt-10 px-6">
+                            <SheetTitle className="sr-only">Menu</SheetTitle>
+                            {/* Mobile Logo */}
+                            <div className="mb-8">
+                                <span className="font-serif text-2xl font-bold tracking-wide text-slate-900">
+                                    Evgeniya <span className="text-primary">Pavlova</span>
+                                </span>
+                            </div>
 
-                        <div className="flex-1 flex flex-col gap-8">
-                            <nav className="flex flex-col gap-6">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.name}
-                                        href={link.href}
-                                        onClick={(e) => scrollToSection(e, link.href)}
-                                        className="text-xl font-medium text-slate-600 hover:text-primary transition-colors border-b border-transparent hover:border-slate-100 pb-2"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                ))}
-                            </nav>
-
-                            <div className="flex flex-col gap-4 mt-auto mb-8">
-                                <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")} className="w-full">
-                                    <Button className="w-full h-12 text-lg bg-primary hover:bg-primary/90 text-slate-900 font-medium transition-all duration-300 shadow-md">
-                                        Chci začít hned
-                                    </Button>
-                                </Link>
-
-                                <div className="mt-6 pt-6 border-t border-slate-100 text-center">
-                                    <p className="text-sm text-slate-400 mb-2">Sledujte nás</p>
-                                    <div className="flex justify-center gap-4">
-                                        <Link href="https://www.instagram.com/pavlova.facemassage" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-primary hover:bg-slate-200 transition-colors">
-                                            <Instagram className="h-5 w-5" />
-                                            <span className="sr-only">Instagram</span>
+                            <div className="flex-1 flex flex-col gap-8">
+                                <nav className="flex flex-col gap-6">
+                                    {navLinks.map((link) => (
+                                        <Link
+                                            key={link.name}
+                                            href={link.href}
+                                            onClick={(e) => scrollToSection(e, link.href)}
+                                            className="text-xl font-medium text-slate-600 hover:text-primary transition-colors border-b border-transparent hover:border-slate-100 pb-2"
+                                        >
+                                            {link.name}
                                         </Link>
+                                    ))}
+                                </nav>
+
+                                <div className="flex flex-col gap-4 mt-auto mb-8">
+                                    <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")} className="w-full">
+                                        <Button className="w-full h-12 text-lg bg-primary hover:bg-primary/90 text-slate-900 font-medium transition-all duration-300 shadow-md">
+                                            {t("cta")}
+                                        </Button>
+                                    </Link>
+
+                                    <div className="mt-6 pt-6 border-t border-slate-100 text-center">
+                                        <p className="text-sm text-slate-400 mb-2">{t("followUs")}</p>
+                                        <div className="flex justify-center gap-4">
+                                            <Link href="https://www.instagram.com/pavlova.facemassage" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-primary hover:bg-slate-200 transition-colors">
+                                                <Instagram className="h-5 w-5" />
+                                                <span className="sr-only">Instagram</span>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </SheetContent>
-                </Sheet>
+                        </SheetContent>
+                    </Sheet>
+                </div>
             </div>
         </header>
     );

@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Sacramento } from "next/font/google";
 import Script from "next/script";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 const sacramento = Sacramento({
@@ -24,13 +26,16 @@ export const metadata: Metadata = {
   description: "Zbavte se otoků a získejte svěží vzhled za pár minut s unikátním video kurzem.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="cs" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <head>
         <noscript>
           <img
@@ -59,7 +64,9 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

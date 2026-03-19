@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
 
 export function Hero() {
+    const t = useTranslations("Hero");
+
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (href.startsWith('#')) {
             e.preventDefault();
@@ -35,13 +38,13 @@ export function Hero() {
                         <div className="space-y-4">
 
                             <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
-                                Ráno bez otoků a <span className="text-primary italic">tvář, která září...</span>
+                                {t("title")}<span className="text-primary italic">{t("titleHighlight")}</span>
                             </h1>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                Exkluzivní program přirozené modelace obličeje samomasáže od expertky Evgeniya Pavlova. Získejte pevné kontury a svěží vzhled za <span className="font-bold">15 minut</span> bez injekci, bolesti a rizika.
+                                {t("description", { minutes: "15" })}
                             </p>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-medium">
-                                Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.
+                                {t("subtitle")}
                             </p>
                         </div>
                         <div className="flex flex-row flex-wrap gap-3">
@@ -51,21 +54,21 @@ export function Hero() {
                                 className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none"
                             >
                                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-slate-900 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
-                                    Chci začít svou proměnu
+                                    {t("ctaPrimary")}
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </Link>
                             <CourseDetailModal
                                 trigger={
                                     <Button size="lg" variant="outline" className="flex-1 min-w-[120px] sm:min-w-0 sm:flex-none w-full sm:w-auto border-primary text-primary hover:bg-primary/10 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
-                                        Více o kurzu
+                                        {t("ctaSecondary")}
                                     </Button>
                                 }
                             />
 
                         </div>
                         <p className="text-xs text-slate-500">
-                            * Přidejte se k více než 100+ spokojeným ženám
+                            {t("socialProof")}
                         </p>
                     </div>
 
@@ -76,7 +79,7 @@ export function Hero() {
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
                                 <Image
                                     src="/foto_2_n_.jpg"
-                                    alt="Relaxační masáž obličeje"
+                                    alt={t("imageAlt")}
                                     fill
                                     className="object-cover"
                                     priority
