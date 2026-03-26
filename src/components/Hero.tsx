@@ -89,8 +89,8 @@ export function Hero() {
                         </p>
                     </div>
 
-                    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px]">
-                        <div className="aspect-[3/4] relative overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
+                    <div className="relative mx-auto w-full max-w-[520px] sm:max-w-[600px] lg:max-w-none">
+                        <div className="relative overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
                             <video
                                 ref={videoRef}
                                 key={videoSrc}
@@ -98,7 +98,7 @@ export function Hero() {
                                 muted
                                 loop
                                 playsInline
-                                className="absolute inset-0 h-full w-full object-cover"
+                                className="block w-full h-auto"
                             >
                                 <source src={videoSrc} type="video/mp4" />
                             </video>
