@@ -49,7 +49,7 @@ export function AboutMe() {
                         <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 shadow-lg">
                             <div className="absolute inset-0 flex items-center justify-center text-slate-400">
                                 <Image
-                                    src="/foto_1_n.JPEG"
+                                    src="/foto_2_n_.jpg"
                                     alt={t("imageAlt")}
                                     fill
                                     className="object-cover"

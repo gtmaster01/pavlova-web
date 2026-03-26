@@ -1,14 +1,31 @@
 "use client";
 
+import { useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
+
+const heroVideos: Record<string, string> = {
+    cs: "/hero_video_cz.mp4",
+    en: "/hero_video_ru.mp4",
+    ru: "/hero_video_ru.mp4",
+};
 
 export function Hero() {
     const t = useTranslations("Hero");
+    const locale = useLocale();
+    const videoSrc = heroVideos[locale] ?? heroVideos.cs;
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isMuted, setIsMuted] = useState(true);
+
+    const toggleMute = useCallback(() => {
+        if (videoRef.current) {
+            videoRef.current.muted = !videoRef.current.muted;
+            setIsMuted(videoRef.current.muted);
+        }
+    }, []);
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (href.startsWith('#')) {
@@ -37,8 +54,8 @@ export function Hero() {
                     <div className="flex flex-col justify-center space-y-8 lg:-translate-y-[15%] transform transition-transform duration-500">
                         <div className="space-y-4">
 
-                            <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
-                                {t("title")}<span className="text-primary italic">{t("titleHighlight")}</span>
+                            <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl/none">
+                                {t("title")}<span className="text-primary">{t("titleHighlight")}</span>
                             </h1>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                 {t("description", { minutes: "15" })}
@@ -72,26 +89,30 @@ export function Hero() {
                         </p>
                     </div>
 
-                    {/* Image Placeholder */}
-                    <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
-                        <div className="aspect-[4/5] relative overflow-hidden rounded-2xl bg-slate-200 shadow-xl ring-1 ring-slate-900/10">
-                            {/* Replace with actual image later */}
-                            <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
-                                <Image
-                                    src="/foto_2_n_.jpg"
-                                    alt={t("imageAlt")}
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
+                    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px]">
+                        <div className="aspect-[3/4] relative overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
+                            <video
+                                ref={videoRef}
+                                key={videoSrc}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="absolute inset-0 h-full w-full object-cover"
+                            >
+                                <source src={videoSrc} type="video/mp4" />
+                            </video>
 
-                            {/* Decorative frame */}
-                            <div className="absolute inset-0 border-[12px] border-white/50" />
+                            <button
+                                onClick={toggleMute}
+                                className="absolute bottom-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+                                aria-label={isMuted ? "Unmute" : "Mute"}
+                            >
+                                {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                            </button>
 
-                            {/* Decorative elements */}
-                            <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
-                            <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl" />
+                            <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
+                            <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl pointer-events-none" />
                         </div>
                     </div>
                 </div>
