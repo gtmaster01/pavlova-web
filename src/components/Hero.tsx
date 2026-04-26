@@ -1,31 +1,14 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Volume2, VolumeX } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
-
-const heroVideos: Record<string, string> = {
-    cs: "/hero_video_cz.mp4",
-    en: "/hero_video_ru.mp4",
-    ru: "/hero_video_ru.mp4",
-};
 
 export function Hero() {
     const t = useTranslations("Hero");
-    const locale = useLocale();
-    const videoSrc = heroVideos[locale] ?? heroVideos.cs;
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const [isMuted, setIsMuted] = useState(true);
-
-    const toggleMute = useCallback(() => {
-        if (videoRef.current) {
-            videoRef.current.muted = !videoRef.current.muted;
-            setIsMuted(videoRef.current.muted);
-        }
-    }, []);
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (href.startsWith('#')) {
@@ -58,7 +41,12 @@ export function Hero() {
                                 {t("title")}<span className="text-primary">{t("titleHighlight")}</span>
                             </h1>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                {t("description", { minutes: "15" })}
+                                {t.rich("description", {
+                                    minutes: "15",
+                                    highlight: (chunks) => (
+                                        <span className="font-bold text-primary">{chunks}</span>
+                                    ),
+                                })}
                             </p>
                             <p className="max-w-[600px] text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-medium">
                                 {t("subtitle")}
@@ -70,14 +58,14 @@ export function Hero() {
                                 onClick={(e) => scrollToSection(e, "#cenik")}
                                 className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none"
                             >
-                                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white rounded-full px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
+                                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
                                     {t("ctaFree")}
                                     <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
                             </Link>
                             <CourseDetailModal
                                 trigger={
-                                    <Button size="lg" variant="outline" className="flex-1 min-w-[120px] sm:min-w-0 sm:flex-none w-full sm:w-auto border-primary text-primary hover:bg-primary/10 rounded-full px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
+                                    <Button size="lg" variant="outline" className="flex-1 min-w-[120px] sm:min-w-0 sm:flex-none w-full sm:w-auto border-primary text-primary hover:bg-primary/10 px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
                                         {t("ctaSecondary")}
                                     </Button>
                                 }
@@ -89,31 +77,35 @@ export function Hero() {
                         </p>
                     </div>
 
-                    <div className="relative mx-auto w-full max-w-[520px] sm:max-w-[600px] lg:max-w-none">
-                        <div className="relative overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
-                            <video
-                                ref={videoRef}
-                                key={videoSrc}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                className="block w-full h-auto"
-                            >
-                                <source src={videoSrc} type="video/mp4" />
-                            </video>
-
-                            <button
-                                onClick={toggleMute}
-                                className="absolute bottom-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
-                                aria-label={isMuted ? "Unmute" : "Mute"}
-                            >
-                                {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-                            </button>
-
-                            <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-                            <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl pointer-events-none" />
+                    <div className="relative mx-auto w-full max-w-[600px]">
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 shadow-lg ring-1 ring-slate-900/10">
+                                <Image
+                                    src="/pred.jpeg"
+                                    alt={t("beforeLabel")}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute top-3 left-3 bg-slate-900/70 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
+                                    {t("beforeLabel")}
+                                </div>
+                            </div>
+                            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100 shadow-xl ring-2 ring-primary/40">
+                                <Image
+                                    src="/po.jpg"
+                                    alt={t("afterLabel")}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute top-3 left-3 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                                    {t("afterLabel")}
+                                </div>
+                            </div>
                         </div>
+                        <div className="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl pointer-events-none -z-10" />
+                        <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl pointer-events-none -z-10" />
                     </div>
                 </div>
             </div>

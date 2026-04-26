@@ -11,7 +11,7 @@ export function Footer() {
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105">
-                            <span className="font-serif text-xl font-bold tracking-wide text-slate-900 group-hover:text-primary transition-colors duration-300">
+                            <span className="text-xl font-bold tracking-wide text-slate-900 group-hover:text-primary transition-colors duration-300">
                                 Evgeniya <span className="text-primary group-hover:text-slate-900 transition-colors duration-300">Pavlova</span>
                             </span>
                         </Link>
@@ -21,7 +21,7 @@ export function Footer() {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="font-serif text-lg font-semibold text-slate-900">{t("courseTitle")}</h3>
+                        <h3 className="text-lg font-semibold text-slate-900">{t("courseTitle")}</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
                             <li><Link href="#o-kurzu" className="hover:text-primary">{t("aboutCourse")}</Link></li>
                             <li><Link href="#cenik" className="hover:text-primary">{t("pricing")}</Link></li>
@@ -30,7 +30,7 @@ export function Footer() {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="font-serif text-lg font-semibold text-slate-900">{t("contactTitle")}</h3>
+                        <h3 className="text-lg font-semibold text-slate-900">{t("contactTitle")}</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
                             <li>info@pavlova.eu</li>
                             <li>+420 608 236 696</li>
@@ -45,7 +45,7 @@ export function Footer() {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="font-serif text-lg font-semibold text-slate-900">{t("legalTitle")}</h3>
+                        <h3 className="text-lg font-semibold text-slate-900">{t("legalTitle")}</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
                             <li><Link href="#" className="hover:text-primary">{t("terms")}</Link></li>
                             <li><Link href="#" className="hover:text-primary">{t("privacy")}</Link></li>

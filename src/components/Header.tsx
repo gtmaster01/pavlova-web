@@ -49,7 +49,7 @@ export function Header() {
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105"
                 >
-                    <span className="font-serif text-xl font-bold tracking-wide text-slate-900 group-hover:text-primary transition-colors duration-300">
+                    <span className="text-xl font-bold tracking-wide text-slate-900 group-hover:text-primary transition-colors duration-300">
                         Evgeniya <span className="text-primary group-hover:text-slate-900 transition-colors duration-300">Pavlova</span>
                     </span>
                 </Link>
@@ -73,7 +73,7 @@ export function Header() {
                 <div className="hidden md:flex items-center gap-4">
                     <LanguageSwitcher />
                     <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")}>
-                        <Button className="bg-primary hover:bg-primary/90 text-slate-900 rounded-full font-medium px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
+                        <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
                             {t("cta")}
                         </Button>
                     </Link>
@@ -93,7 +93,7 @@ export function Header() {
                             <SheetTitle className="sr-only">Menu</SheetTitle>
                             {/* Mobile Logo */}
                             <div className="mb-8">
-                                <span className="font-serif text-2xl font-bold tracking-wide text-slate-900">
+                                <span className="text-2xl font-bold tracking-wide text-slate-900">
                                     Evgeniya <span className="text-primary">Pavlova</span>
                                 </span>
                             </div>
@@ -114,7 +114,7 @@ export function Header() {
 
                                 <div className="flex flex-col gap-4 mt-auto mb-8">
                                     <Link href="#cenik" onClick={(e) => scrollToSection(e, "#cenik")} className="w-full">
-                                        <Button className="w-full h-12 text-lg bg-primary hover:bg-primary/90 text-slate-900 font-medium transition-all duration-300 shadow-md">
+                                        <Button className="w-full h-12 text-lg bg-primary hover:bg-primary/90 text-white font-medium transition-all duration-300 shadow-md">
                                             {t("cta")}
                                         </Button>
                                     </Link>

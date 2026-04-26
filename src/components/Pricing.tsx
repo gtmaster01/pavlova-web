@@ -34,7 +34,7 @@ export function Pricing() {
         <section id="cenik" className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-6 space-y-4">
-                    <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                         {t("title")}
                     </h2>
                     <p className="text-slate-600 text-lg">
@@ -56,7 +56,7 @@ export function Pricing() {
                         <CardHeader className="pb-4">
                             <div className="flex items-center gap-2 mb-1">
                                 <Gift className="h-5 w-5 text-green-500" />
-                                <CardTitle className="font-serif text-xl text-slate-900">{t("freeTitle")}</CardTitle>
+                                <CardTitle className="text-xl text-slate-900">{t("freeTitle")}</CardTitle>
                             </div>
                             <CardDescription className="text-sm">{t("freeDescription")}</CardDescription>
                         </CardHeader>
@@ -96,7 +96,7 @@ export function Pricing() {
                         <CardHeader className="pb-4">
                             <div className="flex items-center gap-2 mb-1">
                                 <Star className="h-5 w-5 text-primary" />
-                                <CardTitle className="font-serif text-xl text-slate-900">{t("starterTitle")}</CardTitle>
+                                <CardTitle className="text-xl text-slate-900">{t("starterTitle")}</CardTitle>
                             </div>
                             <CardDescription className="text-sm">{t("starterDescription")}</CardDescription>
                         </CardHeader>
@@ -128,7 +128,7 @@ export function Pricing() {
                                 rel="noopener noreferrer"
                                 className="block w-full"
                             >
-                                <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
+                                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
                                     {t("starterCta")}
                                 </Button>
                             </a>
@@ -137,13 +137,13 @@ export function Pricing() {
 
                     {/* Full Course Tier */}
                     <Card className="flex flex-col border-primary/50 shadow-lg relative overflow-hidden bg-slate-50/50">
-                        <div className="absolute top-0 right-0 bg-primary text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                             {t("fullBadge")}
                         </div>
                         <CardHeader className="pb-4">
                             <div className="flex items-center gap-2 mb-1">
                                 <Crown className="h-5 w-5 text-primary" />
-                                <CardTitle className="font-serif text-xl text-slate-900">{t("fullTitle")}</CardTitle>
+                                <CardTitle className="text-xl text-slate-900">{t("fullTitle")}</CardTitle>
                             </div>
                             <CardDescription className="text-sm">{t("fullDescription")}</CardDescription>
                         </CardHeader>
@@ -179,7 +179,7 @@ export function Pricing() {
                                 rel="noopener noreferrer"
                                 className="block w-full"
                             >
-                                <Button className="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
+                                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200">
                                     {t("fullCta")}
                                 </Button>
                             </a>
@@ -192,7 +192,7 @@ export function Pricing() {
                             {t("vipBadge")}
                         </div>
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-serif text-xl text-white">{t("vipTitle")}</CardTitle>
+                            <CardTitle className="text-xl text-white">{t("vipTitle")}</CardTitle>
                             <CardDescription className="text-slate-300 text-sm">{t("vipDescription")}</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-1">

@@ -15,13 +15,15 @@
   "Hero": {
     "title": "Morning without puffiness and ",
     "titleHighlight": "a face that glows...",
-    "description": "An exclusive program of natural face sculpting self-massage by expert Evgeniya Pavlova. Achieve firm contours and a fresh look in just {minutes} minutes without injections, pain, or risk.",
+    "description": "An exclusive program of natural face sculpting self-massage by expert Evgeniya Pavlova. Achieve firm contours and a fresh look in just <highlight>{minutes} minutes</highlight> without injections, pain, or risk.",
     "subtitle": "Invest in your beauty that radiates health. A complete course for your transformation.",
     "ctaPrimary": "Start My Transformation",
     "ctaFree": "Try for free",
     "ctaSecondary": "More About the Course",
     "socialProof": "* Join 100+ satisfied women",
-    "imageAlt": "Relaxing facial massage"
+    "imageAlt": "Relaxing facial massage",
+    "beforeLabel": "Before",
+    "afterLabel": "After"
   },
   "AboutMe": {
     "title": "Your guide to natural beauty and health",

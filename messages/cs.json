@@ -15,13 +15,15 @@
   "Hero": {
     "title": "Ráno bez otoků a ",
     "titleHighlight": "tvář, která září...",
-    "description": "Exkluzivní program přirozené modelace obličeje samomasáže od expertky Evgeniya Pavlova. Získejte pevné kontury a svěží vzhled za {minutes} minut bez injekci, bolesti a rizika.",
+    "description": "Exkluzivní program přirozené modelace obličeje samomasáže od expertky Evgeniya Pavlova. Získejte pevné kontury a svěží vzhled za <highlight>{minutes} minut</highlight> bez injekci, bolesti a rizika.",
     "subtitle": "Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.",
     "ctaPrimary": "Chci začít svou proměnu",
     "ctaFree": "Vyzkoušet zdarma",
     "ctaSecondary": "Více o kurzu",
     "socialProof": "* Přidejte se k více než 100+ spokojeným ženám",
-    "imageAlt": "Relaxační masáž obličeje"
+    "imageAlt": "Relaxační masáž obličeje",
+    "beforeLabel": "Před",
+    "afterLabel": "Po"
   },
   "AboutMe": {
     "title": "Vaše průvodkyně k přirozené kráse a zdraví",

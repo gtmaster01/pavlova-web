@@ -31,7 +31,7 @@ export function CourseDetailModal({ trigger }: { trigger?: React.ReactNode }) {
             </DialogTrigger>
             <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
-                    <DialogTitle className="font-serif text-2xl text-center mb-2">{t("title")}</DialogTitle>
+                    <DialogTitle className="text-2xl text-center mb-2">{t("title")}</DialogTitle>
                     <DialogDescription className="text-center text-base">
                         {t("description")}
                     </DialogDescription>
@@ -70,7 +70,7 @@ export function CourseDetailModal({ trigger }: { trigger?: React.ReactNode }) {
 
                     <DialogClose asChild>
                         <Button
-                            className="w-full mt-2 bg-primary text-slate-900 font-bold hover:bg-primary/90 text-lg py-6 shadow-md hover:shadow-lg transition-all"
+                            className="w-full mt-2 bg-primary text-white font-bold hover:bg-primary/90 text-lg py-6 shadow-md hover:shadow-lg transition-all"
                             onClick={() => document.getElementById("cenik")?.scrollIntoView({ behavior: "smooth" })}
                         >
                             {t("enrollCta")}
