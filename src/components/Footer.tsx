@@ -32,7 +32,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-slate-900">{t("contactTitle")}</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
-                            <li>info@pavlova.eu</li>
+                            <li>pavlovaevgeniya86@gmail.com</li>
                             <li>+420 608 236 696</li>
                             <li>{t("followSocial")}</li>
                         </ul>
