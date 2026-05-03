@@ -1,17 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
 import { FomoCornerBadge } from "./FomoCountdown";
-import { getPaymentLinks } from "@/lib/payment-links";
+import { FreeEnrollModal } from "./FreeEnrollModal";
 
 export function Hero() {
     const t = useTranslations("Hero");
-    const locale = useLocale();
-    const links = getPaymentLinks(locale);
+    const [enrollOpen, setEnrollOpen] = useState(false);
 
     return (
         <section className="relative overflow-hidden bg-slate-50 py-12 md:py-24 lg:py-32">
@@ -38,17 +38,14 @@ export function Hero() {
                         <div className="flex flex-row flex-wrap gap-3 pt-2">
                             <div className="relative flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none">
                                 <FomoCornerBadge />
-                                <a
-                                    href={links.free}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block"
+                                <Button
+                                    size="lg"
+                                    onClick={() => setEnrollOpen(true)}
+                                    className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap"
                                 >
-                                    <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
-                                        {t("ctaFree")}
-                                        <ArrowRight className="ml-2 h-5 w-5" />
-                                    </Button>
-                                </a>
+                                    {t("ctaFree")}
+                                    <ArrowRight className="ml-2 h-5 w-5" />
+                                </Button>
                             </div>
                             <CourseDetailModal
                                 trigger={
@@ -62,6 +59,7 @@ export function Hero() {
                         <p className="text-xs text-slate-500">
                             {t("socialProof")}
                         </p>
+                        <FreeEnrollModal open={enrollOpen} onOpenChange={setEnrollOpen} />
                     </div>
 
                     <div className="relative mx-auto w-full max-w-[600px]">
