@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { META_PIXEL_ID } from "@/lib/pixel";
 import "../globals.css";
 
 const inter = Inter({
@@ -55,7 +56,7 @@ export default async function LocaleLayout({
                         height="1"
                         width="1"
                         style={{ display: "none" }}
-                        src="https://www.facebook.com/tr?id=486569780979509&ev=PageView&noscript=1"
+                        src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
                         alt=""
                     />
                 </noscript>
@@ -73,7 +74,16 @@ export default async function LocaleLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '486569780979509');
+            try {
+              var __fbAm = JSON.parse(localStorage.getItem('fb_am') || 'null');
+              if (__fbAm && __fbAm.em) {
+                fbq('init', '${META_PIXEL_ID}', __fbAm);
+              } else {
+                fbq('init', '${META_PIXEL_ID}');
+              }
+            } catch (e) {
+              fbq('init', '${META_PIXEL_ID}');
+            }
             fbq('track', 'PageView');
           `}
                 </Script>
