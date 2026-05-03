@@ -1,34 +1,14 @@
-import { Check, X, Gift, Star, Crown, Sparkles } from "lucide-react";
+import { Check, X, Star, Crown, Sparkles } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { CourseDetailModal } from "./CourseDetailModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-
-const paymentLinks: Record<string, { free: string; starter: string; full: string; vip: string }> = {
-    en: {
-        free: "https://pavlova.kwiga.com/o/7KbjJHKninjH",
-        starter: "https://pavlova.kwiga.com/o/9684vJZ9jZl5",
-        full: "https://pavlova.kwiga.com/o/E0bVHQBPEeal",
-        vip: "https://pavlova.kwiga.com/o/8DYRFRzUm8EZ",
-    },
-    ru: {
-        free: "https://pavlova.kwiga.com/o/8devcbVY7Dgh",
-        starter: "https://pavlova.kwiga.com/o/XcmWpwPjD69D",
-        full: "https://pavlova.kwiga.com/o/XFDlm8sdrQiJ",
-        vip: "https://pavlova.kwiga.com/o/Rf1H6XZXMAer",
-    },
-    cs: {
-        free: "https://pavlova.kwiga.com/o/J5xT3z25nKIO",
-        starter: "https://pavlova.kwiga.com/o/1EFPIo5qMQDh",
-        full: "https://pavlova.kwiga.com/o/GMLw9epvreMU",
-        vip: "https://pavlova.kwiga.com/o/LahrVqDVsJO5",
-    },
-};
+import { getPaymentLinks } from "@/lib/payment-links";
 
 export function Pricing() {
     const t = useTranslations("Pricing");
     const locale = useLocale();
-    const links = paymentLinks[locale] ?? paymentLinks.cs;
+    const links = getPaymentLinks(locale);
 
     return (
         <section id="cenik" className="py-16 md:py-24 bg-white">
@@ -50,47 +30,7 @@ export function Pricing() {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                    {/* Free Tier */}
-                    <Card className="flex flex-col border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                        <CardHeader className="pb-4">
-                            <div className="flex items-center gap-2 mb-1">
-                                <Gift className="h-5 w-5 text-green-500" />
-                                <CardTitle className="text-xl text-slate-900">{t("freeTitle")}</CardTitle>
-                            </div>
-                            <CardDescription className="text-sm">{t("freeDescription")}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex-1">
-                            <div className="text-3xl font-bold text-green-600 mb-5">{t("freePrice")}</div>
-                            <ul className="space-y-2.5">
-                                <li className="flex items-start text-sm text-slate-600">
-                                    <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                                    {t("freeFeature1")}
-                                </li>
-                                <li className="flex items-start text-sm text-slate-600">
-                                    <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                                    {t("freeFeature2")}
-                                </li>
-                                <li className="flex items-start text-sm text-slate-600">
-                                    <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                                    {t("freeFeature3")}
-                                </li>
-                            </ul>
-                        </CardContent>
-                        <CardFooter>
-                            <a
-                                href={links.free}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-full"
-                            >
-                                <Button variant="outline" className="w-full border-green-500 text-green-700 hover:bg-green-50 font-bold shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-200">
-                                    {t("freeCta")}
-                                </Button>
-                            </a>
-                        </CardFooter>
-                    </Card>
-
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {/* Starter Tier */}
                     <Card className="flex flex-col border-primary/30 shadow-sm hover:shadow-md transition-shadow">
                         <CardHeader className="pb-4">

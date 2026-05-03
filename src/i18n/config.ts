@@ -1,3 +1,6 @@
-export const locales = ["cs", "en", "ru"] as const;
-export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "cs";
+export { routing } from "./routing";
+export type { Locale } from "./routing";
+
+import { routing } from "./routing";
+export const locales = routing.locales;
+export const defaultLocale = routing.defaultLocale;

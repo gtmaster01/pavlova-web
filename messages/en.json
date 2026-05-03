@@ -19,6 +19,7 @@
     "subtitle": "Invest in your beauty that radiates health. A complete course for your transformation.",
     "ctaPrimary": "Start My Transformation",
     "ctaFree": "Try for free",
+    "fomoBadge": "Free today",
     "ctaSecondary": "More About the Course",
     "socialProof": "* Join 100+ satisfied women",
     "imageAlt": "Relaxing facial massage",
@@ -68,6 +69,7 @@
     "freeFeature2": "Key to a relaxed expression and softened features",
     "freeFeature3": "Instant access after registration",
     "freeCta": "TRY FOR FREE",
+    "fomoLabel": "Today's bonus ends in",
 
     "starterTitle": "STARTER",
     "starterDescription": "Immediate results for your most pressing concern.",
@@ -167,6 +169,7 @@
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "cookies": "Cookies",
-    "copyright": "\u00a9 {year} Evgeniya Pavlova. All rights reserved."
+    "copyright": "\u00a9 {year} Evgeniya Pavlova. All rights reserved.",
+    "language": "Language"
   }
 }
