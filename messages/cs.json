@@ -19,6 +19,7 @@
     "subtitle": "Investujte do své krásy, která vyzařuje zdraví. Kompletní kurz pro vaši proměnu.",
     "ctaPrimary": "Chci začít svou proměnu",
     "ctaFree": "Vyzkoušet zdarma",
+    "fomoBadge": "Dnes zdarma",
     "ctaSecondary": "Více o kurzu",
     "socialProof": "* Přidejte se k více než 100+ spokojeným ženám",
     "imageAlt": "Relaxační masáž obličeje",
@@ -68,6 +69,7 @@
     "freeFeature2": "Klíč k uvolněnému výrazu a zjemnění rysů",
     "freeFeature3": "Přístup ihned po registraci",
     "freeCta": "VYZKOUŠET ZDARMA",
+    "fomoLabel": "Dnešní bonus zmizí za",
 
     "starterTitle": "STARTER",
     "starterDescription": "Okamžité výsledky pro váš nejpalčivější problém.",
@@ -167,6 +169,7 @@
     "terms": "Obchodní podmínky",
     "privacy": "Ochrana osobních údajů",
     "cookies": "Cookies",
-    "copyright": "© {year} Evgeniya Pavlova. Všechna práva vyhrazena."
+    "copyright": "© {year} Evgeniya Pavlova. Všechna práva vyhrazena.",
+    "language": "Jazyk"
   }
 }

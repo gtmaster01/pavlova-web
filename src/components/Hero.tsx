@@ -1,34 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { CourseDetailModal } from "./CourseDetailModal";
+import { FomoCornerBadge } from "./FomoCountdown";
+import { getPaymentLinks } from "@/lib/payment-links";
 
 export function Hero() {
     const t = useTranslations("Hero");
-
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const id = href.substring(1);
-            const element = document.getElementById(id);
-            if (element) {
-                const offset = 80; // height of header
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = element.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    };
+    const locale = useLocale();
+    const links = getPaymentLinks(locale);
 
     return (
         <section className="relative overflow-hidden bg-slate-50 py-12 md:py-24 lg:py-32">
@@ -52,17 +35,21 @@ export function Hero() {
                                 {t("subtitle")}
                             </p>
                         </div>
-                        <div className="flex flex-row flex-wrap gap-3">
-                            <Link
-                                href="#cenik"
-                                onClick={(e) => scrollToSection(e, "#cenik")}
-                                className="flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none"
-                            >
-                                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
-                                    {t("ctaFree")}
-                                    <ArrowRight className="ml-2 h-5 w-5" />
-                                </Button>
-                            </Link>
+                        <div className="flex flex-row flex-wrap gap-3 pt-2">
+                            <div className="relative flex-[2] min-w-[140px] sm:min-w-0 sm:flex-none">
+                                <FomoCornerBadge />
+                                <a
+                                    href={links.free}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                >
+                                    <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-4 sm:px-8 text-sm sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg whitespace-nowrap">
+                                        {t("ctaFree")}
+                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                    </Button>
+                                </a>
+                            </div>
                             <CourseDetailModal
                                 trigger={
                                     <Button size="lg" variant="outline" className="flex-1 min-w-[120px] sm:min-w-0 sm:flex-none w-full sm:w-auto border-primary text-primary hover:bg-primary/10 px-4 sm:px-8 text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">

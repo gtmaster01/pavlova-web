@@ -1,6 +1,7 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Instagram } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Footer() {
     const t = useTranslations("Footer");
@@ -53,8 +54,12 @@ export function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="mt-12 border-t border-slate-100 pt-8 text-center text-sm text-slate-400">
+                <div className="mt-12 border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
                     <p>{t("copyright", { year: new Date().getFullYear().toString() })}</p>
+                    <div className="flex items-center gap-3">
+                        <span className="text-xs uppercase tracking-wider text-slate-400">{t("language")}</span>
+                        <LanguageSwitcher />
+                    </div>
                 </div>
             </div>
         </footer>
