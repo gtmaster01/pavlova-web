@@ -11,6 +11,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { META_PIXEL_ID } from "@/lib/pixel";
 
 declare global {
     interface Window {
@@ -61,6 +62,16 @@ export function FreeEnrollModal({
             }
 
             if (typeof window !== "undefined" && window.fbq) {
+                const advancedMatching = {
+                    em: email.toLowerCase().trim(),
+                    fn: firstName.toLowerCase().trim(),
+                };
+                try {
+                    localStorage.setItem("fb_am", JSON.stringify(advancedMatching));
+                } catch {
+                    // localStorage unavailable (private mode etc.) — non-fatal
+                }
+                window.fbq("init", META_PIXEL_ID, advancedMatching);
                 window.fbq("track", "Lead", {
                     content_name: "Free course enrollment",
                     content_category: "course_free",
