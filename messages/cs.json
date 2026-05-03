@@ -28,7 +28,7 @@
   },
   "AboutMe": {
     "title": "Vaše průvodkyně k přirozené kráse a zdraví",
-    "quote": "\u201EKrása pro mě není boj proti věku, ale umění stárnout s grácií (well-age).\u201C",
+    "quote": "„Krása pro mě není boj proti věku, ale umění stárnout s grácií (well-age).“",
     "bio": "Můj přístup ke kosmetologii definovalo vítězství nad onkologickým onemocněním. Tato zkušenost mě naučila, že bezpečnost a respekt k tělu jsou na prvním místě. Moje práce není jen o estetice, je o navrácení vnitřní záře skrze péči, která je bezpečná i pro tu nejcitlivější pleť.",
     "whyTrustTitle": "Proč mi klienti důvěřují?",
     "educationLabel": "Odborné vzdělání:",
@@ -61,7 +61,6 @@
     "title": "Vyberte si svou cestu k zářivé pleti",
     "subtitle": "Začněte zdarma a pokračujte vlastním tempem.",
     "upgradeHint": "Začněte za 299 Kč — a kdykoliv si dokupte celý kurz se slevou!",
-
     "freeTitle": "ZDARMA",
     "freeDescription": "Vyzkoušejte si metodu Well-age na vlastní kůži.",
     "freePrice": "0 Kč",
@@ -70,7 +69,6 @@
     "freeFeature3": "Přístup ihned po registraci",
     "freeCta": "VYZKOUŠET ZDARMA",
     "fomoLabel": "Dnešní bonus zmizí za",
-
     "starterTitle": "STARTER",
     "starterDescription": "Okamžité výsledky pro váš nejpalčivější problém.",
     "starterPrice": "299 Kč",
@@ -79,7 +77,6 @@
     "starterFeature3": "Metoda Well-age bez pomůcek",
     "starterUpgradeNote": "Dokupte celý kurz kdykoliv za zvýhodněnou cenu 1 699 Kč místo 2 399 Kč",
     "starterCta": "ZAČÍT ZA 299 Kč",
-
     "fullBadge": "NEJLEPŠÍ HODNOTA",
     "fullTitle": "KOMPLETNÍ KURZ",
     "fullDescription": "Celý systém 7 lekcí pro kompletní proměnu.",
@@ -90,7 +87,6 @@
     "fullExcluded1": "Osobní konzultace s Evgeniyou",
     "fullExcluded2": "Individuální kontrola techniky",
     "fullCta": "KOUPIT KOMPLETNÍ KURZ",
-
     "vipBadge": "VIP",
     "vipTitle": "OSOBNÍ MENTORING",
     "vipDescription": "Maximální výsledky pod mým odborným dohledem.",
@@ -100,7 +96,6 @@
     "vipFeature3": "Privátní WhatsApp chat (1 měsíc)",
     "vipFeature4": "Kontrola vaší techniky přes video",
     "vipCta": "CHCI VIP PÉČI",
-
     "moreInfo": "Chcete vědět více o tom, jak kurz probíhá?"
   },
   "FAQ": {
@@ -171,5 +166,21 @@
     "cookies": "Cookies",
     "copyright": "© {year} Evgeniya Pavlova. Všechna práva vyhrazena.",
     "language": "Jazyk"
+  },
+  "FreeEnroll": {
+    "title": "Vyzkoušejte 1. lekci zdarma",
+    "description": "Přístup k bonusové lekci vám pošleme na email do pár minut.",
+    "firstNameLabel": "Jméno",
+    "firstNamePlaceholder": "Vaše křestní jméno",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "vas@email.cz",
+    "submit": "Poslat mi přístup zdarma",
+    "submitting": "Odesílám…",
+    "successTitle": "Hotovo! 🎉",
+    "successBody": "Zkontrolujte si e-mail — během několika minut vám dorazí přístupové údaje. Pokud nedorazí do 10 minut, podívejte se do spamu.",
+    "successClose": "Zavřít",
+    "privacyNote": "Vaše údaje použijeme pouze k zaslání přístupu a občasných tipů. Můžete se kdykoli odhlásit.",
+    "genericError": "Něco se pokazilo. Zkuste to prosím znovu nebo nám napište na WhatsApp.",
+    "networkError": "Nelze odeslat formulář. Zkontrolujte prosím internetové připojení."
   }
 }

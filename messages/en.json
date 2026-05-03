@@ -61,7 +61,6 @@
     "title": "Choose your path to radiant skin",
     "subtitle": "Start for free and continue at your own pace.",
     "upgradeHint": "Start for just €12 — upgrade to the full course anytime at a discount!",
-
     "freeTitle": "FREE",
     "freeDescription": "Try the Well-age method on your own skin.",
     "freePrice": "€0",
@@ -70,7 +69,6 @@
     "freeFeature3": "Instant access after registration",
     "freeCta": "TRY FOR FREE",
     "fomoLabel": "Today's bonus ends in",
-
     "starterTitle": "STARTER",
     "starterDescription": "Immediate results for your most pressing concern.",
     "starterPrice": "€12",
@@ -79,7 +77,6 @@
     "starterFeature3": "Well-age method without tools",
     "starterUpgradeNote": "Upgrade to full course anytime for just €69 instead of €99",
     "starterCta": "START FOR €12",
-
     "fullBadge": "BEST VALUE",
     "fullTitle": "FULL COURSE",
     "fullDescription": "The complete 7-lesson system for full transformation.",
@@ -90,7 +87,6 @@
     "fullExcluded1": "Personal consultation with Evgeniya",
     "fullExcluded2": "Individual technique review",
     "fullCta": "BUY FULL COURSE",
-
     "vipBadge": "VIP",
     "vipTitle": "PERSONAL MENTORING",
     "vipDescription": "Maximum results under my expert guidance.",
@@ -100,7 +96,6 @@
     "vipFeature3": "Private WhatsApp chat (1 month)",
     "vipFeature4": "Technique review via video",
     "vipCta": "I WANT VIP CARE",
-
     "moreInfo": "Want to know more about how the course works?"
   },
   "FAQ": {
@@ -169,7 +164,23 @@
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "cookies": "Cookies",
-    "copyright": "\u00a9 {year} Evgeniya Pavlova. All rights reserved.",
+    "copyright": "© {year} Evgeniya Pavlova. All rights reserved.",
     "language": "Language"
+  },
+  "FreeEnroll": {
+    "title": "Try the 1st lesson for free",
+    "description": "We will email you access to the bonus lesson within minutes.",
+    "firstNameLabel": "First name",
+    "firstNamePlaceholder": "Your first name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send me free access",
+    "submitting": "Sending…",
+    "successTitle": "Done! 🎉",
+    "successBody": "Check your inbox — your access details will arrive in a few minutes. If you don’t see it within 10 minutes, check the spam folder.",
+    "successClose": "Close",
+    "privacyNote": "We will only use your details to send your access and occasional tips. You can unsubscribe anytime.",
+    "genericError": "Something went wrong. Please try again or message us on WhatsApp.",
+    "networkError": "Could not send the form. Please check your internet connection."
   }
 }
