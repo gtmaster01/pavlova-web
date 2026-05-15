@@ -48,9 +48,9 @@ export function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-slate-900">{t("legalTitle")}</h3>
                         <ul className="space-y-2 text-sm text-slate-600">
-                            <li><Link href="#" className="hover:text-primary">{t("terms")}</Link></li>
-                            <li><Link href="#" className="hover:text-primary">{t("privacy")}</Link></li>
-                            <li><Link href="#" className="hover:text-primary">{t("cookies")}</Link></li>
+                            <li><Link href="/terms" className="hover:text-primary">{t("terms")}</Link></li>
+                            <li><Link href="/privacy" className="hover:text-primary">{t("privacy")}</Link></li>
+                            <li><Link href="/cookies" className="hover:text-primary">{t("cookies")}</Link></li>
                         </ul>
                     </div>
                 </div>
